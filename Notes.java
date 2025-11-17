@@ -10,6 +10,9 @@ public class Notes {
 		Scanner reader = new Scanner(System.in);
 		System.out.print("Enter the width and height you would like for your square array: ");
 		int arr[][] = createArr(reader.nextInt());
+		System.out.println("first even num: " + returnFirst(arr));
+		System.out.println("first even num w neighbors w a sum greater than 17: " + first17(arr));
+		System.out.println("first odd num w neighbors w a sum greater than 33: " + first33(arr));
 	}
 
 	public int[][] createArr(int x)

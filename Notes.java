@@ -40,16 +40,30 @@ public class Notes {
 	}
 
 	public int first17(int[][] arr)
+	{
+		for(int i = 0; i < arr.length; i++)
 		{
-			for(int i = 0; i < arr.length; i++)
+			for(int j = 1; j < arr[0].length-1; j++)
 			{
-				for(int j = 1; j < arr[0].length-1; j++)
-				{
-					if((arr[i][j] % 2 == 0) && ((arr[i][j-1] + arr[i][j+1]) > 17))
-						return arr[i][j];
-				}
+				if((arr[i][j] % 2 == 0) && ((arr[i][j-1] + arr[i][j+1]) > 17))
+					return arr[i][j];
 			}
+		}
 
-			return 0;
+		return 0;
+	}
+
+	public int first33(int[][] arr)
+	{
+		for(int i = 1; i < arr.length-1; i++)
+		{
+			for(int j = 1; j < arr[0].length-1; j++)
+			{
+				if((arr[i][j] % 2 == 1) && ((arr[i][j-1] + arr[i][j+1] + arr[i+1][j] + arr[i-1][j]) > 17))
+					return arr[i][j];
+			}
+		}
+
+		return 0;
 	}
 }

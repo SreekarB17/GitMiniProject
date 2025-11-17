@@ -38,4 +38,18 @@ public class Notes {
 
 		return 0;
 	}
+
+	public int first17(int[][] arr)
+		{
+			for(int i = 0; i < arr.length; i++)
+			{
+				for(int j = 1; j < arr[0].length-1; j++)
+				{
+					if((arr[i][j] % 2 == 0) && ((arr[i][j-1] + arr[i][j+1]) > 17))
+						return arr[i][j];
+				}
+			}
+
+			return 0;
+	}
 }
